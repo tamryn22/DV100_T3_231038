@@ -49,3 +49,16 @@ footer{
     margin-top: 10px;
     background-image: url("../images/location.jpeg");
 }
+
+.accordion{
+    width: 50%;
+}
+
+h3{
+    font-family: 'Inter', sans-serif;
+
+}
+
+h1{
+    font-family: 'Roboto Mono', monospace;
+}
