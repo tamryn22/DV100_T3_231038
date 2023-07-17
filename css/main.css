@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/BACKGROUND.jpg");
+    background-color: #94B6EF;
 }
 
 .carousel-inner{
@@ -61,4 +61,8 @@ h3{
 
 h1{
     font-family: 'Roboto Mono', monospace;
+}
+.card{
+    margin: 20px;
+    margin-left: 60px;
 }
