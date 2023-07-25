@@ -12,8 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
 <!--internal document-->
 <link rel="stylesheet" href="/css/main.css">
+<script src="/js/main.js"></script>
+
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -63,6 +67,30 @@
       </nav>
 
       <h3>Tickets</h3>
+      
+      <p><h2>HERE IS YOUR TICKET LIST</h2> </p>
+      <div class="row">
+        <div class="col-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-warning">CODE  /  QUANTITY /  COST</li>
+            <li class="list-group-item">0034 / 2 / R1500</li>
+            <li class="list-group-item">0145 / 1 / R500</li>
+            <li class="list-group-item">0256 / 4 / R3000</li>
+            <li class="list-group-item">0367 / 1 / R300</li>
+          </ul>
+        </div>
+
+        <div class="col-6">
+          <div class="col-box">
+            <h1>TOTAL</h1>
+            <h3><p>Your ticket total</p></h3>
+            <h1><p>R6400</p></h1>
+
+          </div>
+        </div>
+      </div>
+
+      <button id="checkout"><h3>CHECKOUT</h3></button>
 
       <footer>
         <i>For more info contact us.</i>

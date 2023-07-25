@@ -81,3 +81,21 @@ h1{
 .carousel-control-next {
     left: 84px;
 }
+
+.list-group-flush{
+    margin: 20px;
+    width: 650px;
+}
+
+.col-box{
+    height: 350px;
+    width: 200;
+    background-color: #213E60;
+    color: wheat;
+    margin: 20px;
+}
+
+button{
+   background-color: #213E60;
+   color: white;
+}
