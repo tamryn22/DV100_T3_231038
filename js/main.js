@@ -6,5 +6,10 @@ $(document).ready(function ()  {
         alert("Purchase Successful!");
 
     });
+
+    $("#filter").click(function (){
+        $("#all").hide()
+        .slideDown(1000)
+    });
     
 });
