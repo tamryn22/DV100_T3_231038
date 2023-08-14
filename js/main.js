@@ -1,4 +1,4 @@
-const plants = [
+const trip = [
 
     {"name": "French Riviera",
     "price": 550,
@@ -46,15 +46,19 @@ $(document).ready(function ()  {
         .slideDown(1000)
     });
     
+    $("#clear").click(function (){
+      $(".card").hide();
+
+      console.log("Clear")
+      alert("Trips will be removed")
+    });
 
     
     
     
     $(document).ready(function(){
     //select the plants container and add html from our template 
-    $("#removeone").click(function (){
-      $("#one").hide();
-    });
+   
     
     $("#removetwo").click(function (){
       $("#two").hide();
@@ -65,25 +69,25 @@ $(document).ready(function ()  {
     });
     
     //you have to call it only when ready/loaded
-        loadPlants();
+        loadTrip();
     });
     
     
-    function loadPlants () {
-        for (let i = 0; i < plants.length; i++) {
-            console.log(plants[i]);
+    function loadTrip () {
+        for (let i = 0; i < trip.length; i++) {
+            console.log(trip[i]);
     
-            $("#plantsContainer").append($("#plantCardTemplate").html());
+            $("#tripContainer").append($("#tripCardTemplate").html());
     
-            let currentChild = $("#plantsContainer").children().eq(i+1);
+            let currentChild = $("#tripContainer").children().eq(i+1);
     
-            $(currentChild).find(".card-img-top").attr('src','assets/' + plants[i].image);
+            $(currentChild).find(".card-img-top").attr('src','assets/' + trip[i].image);//if you make this trip into plant an image shows
     
-            $(currentChild).find("#nameText").text(plants[i].name);
+            $(currentChild).find("#nameText").text(trip[i].name);
     
-            $(currentChild).find("#priceText").text('R ' + plants[i].price);
+            $(currentChild).find("#priceText").text('R ' + trip[i].price);
     
-            $(currentChild).find("#descriptionText").text(plants[i].description);
+            $(currentChild).find("#descriptionText").text(trip[i].description);
     
             $(currentChild).find("#descriptionText").hide();
             
@@ -92,7 +96,7 @@ $(document).ready(function ()  {
     }
     
     
-    $("#plantsContainer").on('click', '.card', function(){
+    $("#tripContainer").on('click', '.card', function(){
     
       // Toggle the price & description text
       $(this).find("#priceText").toggle();

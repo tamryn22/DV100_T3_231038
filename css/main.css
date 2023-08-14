@@ -97,7 +97,10 @@ h1{
 
 button{
    background-color: #213E60;
+   padding: 7px;
    color: white;
+   border-radius: 10px
+   
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&display=swap');
@@ -241,3 +244,7 @@ p {
     width: 150px;
     height: 150px;
 } */
+
+.table{
+    margin: 20px;
+}
