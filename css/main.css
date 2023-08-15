@@ -93,6 +93,7 @@ h1{
     background-color: #213E60;
     color: wheat;
     margin: 20px;
+   text-align: center;
 }
 
 button{
@@ -244,7 +245,13 @@ p {
     width: 150px;
     height: 150px;
 } */
+/*CHECKOUT PAGE */
 
 .table{
     margin: 20px;
+}
+#checkout{
+    background-color: #94B6EF;
+    border-radius: 10px;
+    padding: 10px;
 }
