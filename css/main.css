@@ -1,7 +1,9 @@
 body{
     background-color: #94B6EF;
 }
-
+#checkoutpage{
+    background-color: antiquewhite;
+}
 .carousel-inner{
     align-items: center;
    
@@ -56,11 +58,15 @@ footer{
 
 h3{
     font-family: 'Inter', sans-serif;
-
 }
 
 h1{
     font-family: 'Roboto Mono', monospace;
+}
+
+h2{
+    text-align:  center;
+    margin-top: 30px;
 }
 .card{
     margin: 20px;
@@ -101,7 +107,9 @@ button{
    padding: 7px;
    color: white;
    border-radius: 10px
-   
+}
+#clear{
+    margin-left: 50PX;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&display=swap');
@@ -254,4 +262,12 @@ p {
     background-color: #94B6EF;
     border-radius: 10px;
     padding: 10px;
+}
+
+#cruisetrip{
+    height: 300px;
+    width: 300px;
+    padding: 30px;
+    border-radius: 150px 12px; ;
+    
 }
