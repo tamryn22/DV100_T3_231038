@@ -7,14 +7,13 @@
 
     <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- Nav Bar -->
+
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Ignite Your Travel Passion</a>
@@ -29,15 +28,15 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   More
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="/pages/trips.html">Trips</a></li>
-                  <li><a class="dropdown-item" href="/pages/checkout.html">Checkout</a></li>
+                  <li><a class="dropdown-item" href="../pages/trips.html">Trips</a></li>
+                  <li><a class="dropdown-item" href="../pages/checkout.html">Checkout</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
@@ -57,8 +56,7 @@
     <div class="container mt-5 pt-5">
 
         <!-- Header -->
-        <h1 id="testingAPI">Browse Trips</h1>
-
+        <h2>Browse Trips</h2>
         
         <!-- ---------------------------------------------------------------------------------------------------- -->
         <!-- Filters and Sorts -->
@@ -72,10 +70,10 @@
             <label class="btn btn-outline-warning" for="allPlantsFilter">All Trips</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" autocomplete="off" value="low">
-            <label class="btn btn-outline-warning" for="brightLightFilter"><i class="bi-brightness-high"></i> Longer</label>
+            <label class="btn btn-outline-warning" for="brightLightFilter"><i class="bi-brightness-high"></i> Recent</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" autocomplete="off" value="bright">
-            <label class="btn btn-outline-warning" for="lowLightFilter"><i class="bi-brightness-low"></i> Shorter</label>
+            <label class="btn btn-outline-warning" for="lowLightFilter"><i class="bi-brightness-low"></i> Later</label>
           </div>
 
           <!-- Sorting Radio Buttons -->
@@ -89,54 +87,40 @@
           </div>
         </div>
 
+        <!-- ---------------------------------------------------------------------------------------------------- -->
         <!-- Plants List Cards -->
-        <div class="row py-5 gy-3" id="tripContainer">
+
+        <div class="row py-5 gy-3" id="plantsContainer">
 
           <!-- Plants cards are appended here -->
 
         </div>
         
     </div>
-
-            <!-- Browse Card Template * Won't display by default * -->
-            <template id="tripCardTemplate">
-              <div class="col-4">
-
-                <!-- Card -->
-                <div class="card">
-                    <img id="cruisetrip" src="../images/cruise1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4 class="card-title" id="nameText">Fabulous France</h4>
-                      <p class="card-text" id="priceText">R320</p>
-                      <p class="card-text mt-4" id="descriptionText">Explore the amazing France waters for 3 days.</p>
-                    </div>
-                  </div>
-              </div>
-            </template>
-
-          <!-- if you add the div here the text works but not the images</div>
-        </div> -->
-    <footer>
-      <i>For more info contact us.</i>
-      <br/> 0649624063 / Vacation Cruises
-      
-      <div class="row">
-          <div class="col-4" ><div class="round-image-a"></div>
-          </div>
-          <div class="col-4" > <div class="round-image-b"></div>
-          </div>          
-          <div class="col-4" ><div class="round-image-c"></div>
-          </div>
-         
-      </div>
-  </footer>
     
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <!-- Templates -->
 
+    <template id="tripCardTemplate">
+      <div class="col-4">
+
+        <!-- Card -->
+        <div class="card">
+            <img id="cruisetrip" src="../images/cruise1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title" id="nameText">Fabulous France</h4>
+              <p class="card-text" id="priceText">R320</p>
+              <p class="card-text mt-4" id="descriptionText">Explore the amazing France waters for 3 days.</p>
+            </div>
+          </div>
+      </div>
+    </template>
+    
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
 
   </body>
 </html>

@@ -2,7 +2,7 @@ body{
     background-color: #94B6EF;
 }
 #checkoutpage{
-    background-color: antiquewhite;
+    background-color: #94B6EF;
 }
 .carousel-inner{
     align-items: center;
@@ -54,6 +54,7 @@ footer{
 
 .accordion{
     width: 50%;
+    margin-left: 350px;
 }
 
 h3{
@@ -62,6 +63,7 @@ h3{
 
 h1{
     font-family: 'Roboto Mono', monospace;
+    text-align:  center;
 }
 
 h2{
@@ -150,25 +152,25 @@ p {
 
 /* Navigation */
 
-.nav-link {
+/* .nav-link {
     font-family: 'Lato', sans-serif;
     color: rgba(0, 0, 0, 0.60);
 }
 
 .nav-link:hover {
     color: #18382B;
-}
+} */
 
-.nav-link.active {
+/* .nav-link.active {
     border-bottom: 2px solid #18382B;
     color: #18382B;
-}
+} */
 
 
 /* Carousel */
 
 .carousel-item {
-    background-color: #E6F2E9;
+    background-color: #94B6EF;
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -270,4 +272,20 @@ p {
     padding: 30px;
     border-radius: 150px 12px; ;
     
+}
+#temp{
+    background-color: #213E60;
+    height: 80px;
+    width: 80px;
+    border-radius: 150px;
+    margin: 40px;
+    margin-left: 650px;
+    color: white;
+
+}
+
+#trash{
+    height: 20px;
+    width: 20px
+
 }
