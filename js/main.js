@@ -1,6 +1,4 @@
-// ------------------------------------------------------------------------
-// Plants Array
-// ------------------------------------------------------------------------
+//trips 
 const tripArray = [
 
   {"name": "French Riviera",
@@ -17,10 +15,38 @@ const tripArray = [
   addedDate: "2023-04-29",
 },
 {
-  "name": "Greek Isles",
-  "price": 950,
+  "name": "Row Boat",
+  "price": 200,
+  "description": "Old World Explorations: From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
+  "image": "row_boat.jpeg",
+  addedDate: "2023-04-29",
+},
+{
+  "name": "Row Boat",
+  "price": 250,
+  "description": "Old World Explorations: From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
+  "image": "row_boat2.jpeg",
+  addedDate: "2023-04-29",
+},
+{
+  "name": "Row Boat",
+  "price": 250,
   "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
-  "image": "cruise3.jpeg",
+  "image": "row_boat3.jpeg",
+  addedDate: "2023-04-29",
+},
+{
+  "name": "Row Boat",
+  "price":300,
+  "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
+  "image": "row_boat4.jpeg",
+  addedDate: "2023-04-29",
+},
+{
+  "name": "Row Boat",
+  "price": 350,
+  "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
+  "image": "row_boat5.jpeg",
   addedDate: "2023-04-29",
 },
 {
@@ -52,48 +78,44 @@ $(document).ready(function(){
     console.log("Hello");
 
     // ------------------------------------------------------------------
-    // Home
-
-    // When the document loads, animate the hero image upwards
-    $("#hero-image").animate({top: '-=100px'});
-
+   
     // ------------------------------------------------------------------
-    // Browse
+    // Browse trips
 
-    filterSortPlants();
+    filterSortTrips();
 
 });
 
 // ------------------------------------------------------------------------
-// Load all plants
+// Load all Trips
 // ------------------------------------------------------------------------
 
-function loadPlants(plantsToShow) {
+function loadTrips(tripsToShow) {
 
-  // Clear all elements inside the plants cards container
+  // Clear all elements inside the Trips cards container
 
-  $("#plantsContainer").empty();
+  $("#tripsContainer").empty();
 
-  // Loop though plants
+  // Loop though trips
 
-  for (let i = 0; i < plantsToShow.length; i++) {
-    const plant = plantsToShow[i];
+  for (let i = 0; i < tripsToShow.length; i++) {
+    const trips = tripsToShow[i];
     
-    console.log(plant.name);
+    console.log(trips.name);
 
     
 
-    // 1: Select the plants container add the plant card to it
-    $("#plantsContainer").append($("#tripCardTemplate").html());
+    // 1: Select the trips container add the trips card to it
+    $("#tripsContainer").append($("#tripCardTemplate").html());
 
-    // 2: Create a variable that contains the most recently added plant card
-    let currentChild = $("#plantsContainer").children().eq(i);
+    // 2: Create a variable that contains the most recently added trip card
+    let currentChild = $("#tripsContainer").children().eq(i);
 
-    // 3: Set the content for the current plant card from the plant array
-    $(currentChild).find("#nameText").text(plant.name);
-    $(currentChild).find("#priceText").text("R" + plant.price);
-    $(currentChild).find("#descriptionText").text(plant.description);
-    $(currentChild).find(".card-img-top").attr('src','/images/' + plant.image);
+    // 3: Set the content for the current trip card from the trip array
+    $(currentChild).find("#nameText").text(trips.name);
+    $(currentChild).find("#priceText").text("R" + trips.price);
+    $(currentChild).find("#descriptionText").text(trips.description);
+    $(currentChild).find(".card-img-top").attr('src','/images/' + trips.image);
 
     // 4: Hide the description text from the curent card
     $(currentChild).find("#descriptionText").hide();
@@ -103,6 +125,17 @@ function loadPlants(plantsToShow) {
 
 };
 
+
+$("#trash").click(function(){
+  $('#1').remove()
+})
+$("#trash2").click(function(){
+  $('#2').remove()
+})
+$("#trash3").click(function(){
+  $('#3').remove()
+})
+
 // ------------------------------------------------------------------------
 // When a filter or sort option is clicked
 // ------------------------------------------------------------------------
@@ -110,43 +143,43 @@ function loadPlants(plantsToShow) {
 $("input[name='filterRadio']").click(function(){
   appliedFilter = $(this).attr('value');
 
-  filterSortPlants();
+  filterSortTrips();
 });
 
 $("input[name='sortRadio']").click(function(){
   appliedSort = $(this).attr('value');
 
-  filterSortPlants();
+  filterSortTrips();
 });
 
-function filterSortPlants() {
+function filterSortTrips() {
   
-  let filteredSortedArrPlants = [];
+  let filteredSortedArrTrips = [];
 
   console.log(appliedFilter);
   console.log(appliedSort);
 
-  // Filter Plants
+  // Filter Trips
 
   if (appliedFilter) {
-    filteredSortedArrPlants = tripArray.filter(plant => plant.lightAmount == appliedFilter);
+    filteredSortedArrTrips = tripArray.filter(trips => trips.lightAmount == appliedFilter);
   } else {
-    filteredSortedArrPlants = tripArray;
+    filteredSortedArrTrips = tripArray;
   }
 
-  // Sort Plants
+  // Sort trips
 
   if (appliedSort == "low to high") {
 
-    // Sort plants from the lowest to highest price
-    filteredSortedArrPlants = filteredSortedArrPlants.sort((a, b) => {
+    // Sort trips from the lowest to highest price
+    filteredSortedArrTrips = filteredSortedArrTrips.sort((a, b) => {
       return a.price - b.price;
     });
 
   } else if (appliedSort == "date added") {
 
-    // Sort plants from the newest to oldest
-    filteredSortedArrPlants = filteredSortedArrPlants.sort((a, b) => {
+    // Sort trips from the newest to oldest
+    filteredSortedArrTrips = filteredSortedArrTrips.sort((a, b) => {
       let da = new Date(a.addedDate);
       let db = new Date(b.addedDate);
     
@@ -155,17 +188,17 @@ function filterSortPlants() {
 
   }
 
-  console.log(filteredSortedArrPlants)
+  console.log(filteredSortedArrTrips)
 
-  loadPlants(filteredSortedArrPlants);
+  loadTrips(filteredSortedArrTrips);
 
 }
 
 // ------------------------------------------------------------------------
-// When a plant card is clicked
+// When a trips card is clicked
 // ------------------------------------------------------------------------
 
-$("#plantsContainer").on('click','.card', function() {
+$("#tripsContainer").on('click','.card', function() {
 
   // Toggle the price & description text
   $(this).find("#priceText").toggle();

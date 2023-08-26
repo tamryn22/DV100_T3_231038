@@ -67,30 +67,37 @@
 
           <div class="btn-group col-auto" role="group">
             <input type="radio" class="btn-check" name="filterRadio" id="allPlantsFilter" value="" autocomplete="off" checked>
-            <label class="btn btn-outline-warning" for="allPlantsFilter">All Trips</label>
+            <label class="btn btn-outline-warning" for="allPlantsFilter">All Destination </label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" autocomplete="off" value="low">
-            <label class="btn btn-outline-warning" for="brightLightFilter"><i class="bi-brightness-high"></i> Recent</label>
+            <label class="btn btn-outline-warning" for="brightLightFilter"><i class="bi-brightness-high"></i> Short Trips</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" autocomplete="off" value="bright">
-            <label class="btn btn-outline-warning" for="lowLightFilter"><i class="bi-brightness-low"></i> Later</label>
+            <label class="btn btn-outline-warning" for="lowLightFilter"><i class="bi-brightness-low"></i> Long Trip</label>
           </div>
 
           <!-- Sorting Radio Buttons -->
 
           <div class="btn-group col-auto" role="group">
             <input type="radio" class="btn-check" name="sortRadio" id="defaultSort" value="date added" autocomplete="off" checked>
-            <label class="btn btn-outline-warning" for="defaultSort"><i class="bi bi-calendar4"></i> Newest to Oldest</label>
+            <label class="btn btn-outline-warning" for="defaultSort"><i class="bi bi-calendar4"></i> Single Destination</label>
           
             <input type="radio" class="btn-check" name="sortRadio" id="priceSort" value="low to high" autocomplete="off">
-            <label class="btn btn-outline-warning" for="priceSort"><i class="bi bi-sort-down-alt"></i> Price: Low to High</label>
+            <label class="btn btn-outline-warning" for="priceSort"><i class="bi bi-sort-down-alt"></i> Multi Destination</label>
+            
+            <input type="radio" class="btn-check" name="sortRadio" id="priceSort" value="low to high" autocomplete="off">
+            <label class="btn btn-outline-warning" for="priceSort"><i class="bi bi-sort-down-alt"></i> Round Trips</label>
+          
+            <input type="radio" class="btn-check" name="sortRadio" id="priceSort" value="low to high" autocomplete="off">
+            <label class="btn btn-outline-warning" for="priceSort"><i class="bi bi-sort-down-alt"></i> Row Boat Special</label>
+          
           </div>
         </div>
 
         <!-- ---------------------------------------------------------------------------------------------------- -->
         <!-- Plants List Cards -->
 
-        <div class="row py-5 gy-3" id="plantsContainer">
+        <div class="row py-5 gy-3" id="tripsContainer">
 
           <!-- Plants cards are appended here -->
 
@@ -111,6 +118,7 @@
               <h4 class="card-title" id="nameText">Fabulous France</h4>
               <p class="card-text" id="priceText">R320</p>
               <p class="card-text mt-4" id="descriptionText">Explore the amazing France waters for 3 days.</p>
+              <p class="card-text" id="purchase"><button>Purchase Ticket</button></p>
             </div>
           </div>
       </div>
