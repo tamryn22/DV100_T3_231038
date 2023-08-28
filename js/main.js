@@ -3,63 +3,63 @@ const tripArray = [
 
   {"name": "French Riviera",
   "price": 550,
-  "description": "The Good Life: Imagine indulgent luncheons with chilled rosé overlooking the sea, driving into the hills of medieval Éze, whiling away the afternoon at Monte Carlo’s Princess Grace Rose Garden and strolling Cannes’ palm-lined La Croisette. This is life on the French Riviera.",
+  "description": "Code #2240 - The Good Life: Imagine indulgent luncheons with chilled rosé overlooking the sea for 5 days and 4 nights, departing at 10am 15 September 2023. This is life on the French Riviera.",
   "image": "cruise1.jpeg",
   addedDate: "2023-04-29",
   },
 {
   "name": "Mediterranean",
   "price": 400,
-  "description": "Old World Explorations: From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
+  "description": "Code #0909 - Old World Explorations: Departing 05 November 2023, From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma for 4 days and 3 nights. ",
   "image": "cruise2.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Row Boat",
   "price": 200,
-  "description": "Old World Explorations: From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
+  "description": "Code #0220 - A better place: Explore from 8am for 2 hours rowing through the exciting seas on the 02 November 2023 ",
   "image": "row_boat.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Row Boat",
   "price": 250,
-  "description": "Old World Explorations: From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
+  "description": "Code #2124 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
   "image": "row_boat2.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Row Boat",
   "price": 250,
-  "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
+  "description": "Code #2224 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma.",
   "image": "row_boat3.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Row Boat",
   "price":300,
-  "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
+  "description": "Code #2324 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma.",
   "image": "row_boat4.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Row Boat",
   "price": 350,
-  "description": "Made For The Gods: Our Greek Isles cruises open the door to journeys that unfold in lands of epic history and play out on sultry islands lined with whitewashed villages.",
+  "description": "Code #2424 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am.",
   "image": "row_boat5.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Greenland",
   "price": 850,
-  "description": "Majestic Landscapes: Our Greenland & Iceland cruises bring you to the edge of the Arctic Circle and fill your days with magnificent fjords, dramatic natural wonders and outdoor adventures on these remote North Atlantic island countries. ",
+  "description": "Code #3323 - Majestic Landscapes: Our Greenland & Iceland cruises bring you to the edge of the Arctic Circle and fill your days with magnificent fjords from the 3rd of December till the 7th of December 2023, dramatic natural wonders and outdoor adventures on these remote North Atlantic island countries. Departing at 11am ",
   "image": "cruise4.jpeg",
   addedDate: "2023-04-29",
 },
 {
   "name": "Alaska",
   "price": 1200,
-  "description": "The Last Frontier: Experience Alaska the way it was meant to be with Oceania Cruises. Revel in the natural wonders of The Last Frontier while enjoying a luxurious small ship experience aboard the beautifully re-inspired Regatta. Our Alaska cruises immerse you in the best of the 49th state – calving glaciers, breathtaking fjords, fascinating wildlife encounters and lively historic gold mining towns like Juneau and Skagway. ",
+  "description": "Code #5756 - The Last Frontier: Experience Alaska the way it was meant to be with Oceania Cruises from the 8th December till the 15th December 2023. Revel in the natural wonders of The Last Frontier while enjoying a luxurious small ship experience aboard the beautifully re-inspired Regatta. Our Alaska cruises immerse you in the best of the 49th state – calving glaciers, breathtaking fjords, fascinating wildlife encounters and lively historic gold mining towns like Juneau and Skagway. Depart at 1pm  ",
   "image": "cruise5.jpeg",
   addedDate: "2023-04-29",
 }
@@ -77,14 +77,14 @@ $(document).ready(function(){
 
     console.log("Hello");
 
-    // ------------------------------------------------------------------
-   
+    $("#heading").text("Oceans Ignite");
+
     // ------------------------------------------------------------------
     // Browse trips
 
     filterSortTrips();
 
-});
+}, 20000);
 
 // ------------------------------------------------------------------------
 // Load all Trips
@@ -126,15 +126,22 @@ function loadTrips(tripsToShow) {
 };
 
 
-$("#trash").click(function(){
+$(".trash1").click(function(){
   $('#1').remove()
 })
-$("#trash2").click(function(){
+$(".trash2").click(function(){
   $('#2').remove()
 })
-$("#trash3").click(function(){
+$(".trash3").click(function(){
   $('#3').remove()
 })
+ 
+$("#clear").click(function(){
+  $('#1').remove()
+  $('#2').remove()
+  $('#3').remove()
+})
+ 
 
 // ------------------------------------------------------------------------
 // When a filter or sort option is clicked

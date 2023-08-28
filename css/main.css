@@ -112,8 +112,10 @@ h2{
 button{
    background-color: #213E60;
    padding: 7px;
+   /* margin-left: 100px; */
    color: white;
    border-radius: 10px
+   
 }
 #clear{
     margin-left: 50PX;
@@ -240,3 +242,4 @@ p {
     width: 20px
 
 }
+
