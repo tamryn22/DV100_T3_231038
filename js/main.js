@@ -77,10 +77,22 @@ $(document).ready(function(){
 
     console.log("Hello");
 
-    $("#heading").text("Oceans Ignite");
-
+    // $("#heading").text("Oceans Ignite");
+    // $("#heading").hover("Oceans Ignite")
+    $("#heading").hover(function(){
+      $("#heading").text("Oceans Ignite")
+    })
     // ------------------------------------------------------------------
     // Browse trips
+    // $("#logo").hover(function(){
+    //   $("#heading").text("Oceans Ignite")
+    // })
+
+    $("#logo").hover(function(){  
+      $(this).attr('src','https://jpeg.org/images/jpeg-home.jpg');  
+      }, function(){  
+      $(this).attr('src','/images/logo.png');  
+    });  
 
     filterSortTrips();
 
