@@ -6,6 +6,7 @@ const tripArray = [
   "description": "Code #2240 - The Good Life: Imagine indulgent luncheons with chilled rosé overlooking the sea for 5 days and 4 nights, departing at 10am 15 September 2023. This is life on the French Riviera.",
   "image": "cruise1.jpeg",
   addedDate: "2023-04-29",
+  length: 10,
   },
 {
   "name": "Mediterranean",
@@ -13,6 +14,7 @@ const tripArray = [
   "description": "Code #0909 - Old World Explorations: Departing 05 November 2023, From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma for 4 days and 3 nights. ",
   "image": "cruise2.jpeg",
   addedDate: "2023-04-29",
+  length: 5,
 },
 {
   "name": "Row Boat",
@@ -20,6 +22,7 @@ const tripArray = [
   "description": "Code #0220 - A better place: Explore from 8am for 2 hours rowing through the exciting seas on the 02 November 2023 ",
   "image": "row_boat.jpeg",
   addedDate: "2023-04-29",
+  length: 7,
 },
 {
   "name": "Row Boat",
@@ -27,6 +30,7 @@ const tripArray = [
   "description": "Code #2124 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma. ",
   "image": "row_boat2.jpeg",
   addedDate: "2023-04-29",
+  length: 15,
 },
 {
   "name": "Row Boat",
@@ -34,6 +38,7 @@ const tripArray = [
   "description": "Code #2224 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma.",
   "image": "row_boat3.jpeg",
   addedDate: "2023-04-29",
+  length: 10,
 },
 {
   "name": "Row Boat",
@@ -41,6 +46,7 @@ const tripArray = [
   "description": "Code #2324 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am. From ancient ruins and atmospheric old quarters to thriving food scenes and sun-drenched beaches, our Mediterranean cruises offer the perfect combination of old-world beauty and modern charisma.",
   "image": "row_boat4.jpeg",
   addedDate: "2023-04-29",
+  length: 12,
 },
 {
   "name": "Row Boat",
@@ -48,6 +54,7 @@ const tripArray = [
   "description": "Code #2424 - Sale away: on the 04 September 2023, enjoy the ocean blue waters and wildlife that awaits at 9am.",
   "image": "row_boat5.jpeg",
   addedDate: "2023-04-29",
+  length: 24,
 },
 {
   "name": "Greenland",
@@ -55,6 +62,7 @@ const tripArray = [
   "description": "Code #3323 - Majestic Landscapes: Our Greenland & Iceland cruises bring you to the edge of the Arctic Circle and fill your days with magnificent fjords from the 3rd of December till the 7th of December 2023, dramatic natural wonders and outdoor adventures on these remote North Atlantic island countries. Departing at 11am ",
   "image": "cruise4.jpeg",
   addedDate: "2023-04-29",
+  length: 7,
 },
 {
   "name": "Alaska",
@@ -62,6 +70,7 @@ const tripArray = [
   "description": "Code #5756 - The Last Frontier: Experience Alaska the way it was meant to be with Oceania Cruises from the 8th December till the 15th December 2023. Revel in the natural wonders of The Last Frontier while enjoying a luxurious small ship experience aboard the beautifully re-inspired Regatta. Our Alaska cruises immerse you in the best of the 49th state – calving glaciers, breathtaking fjords, fascinating wildlife encounters and lively historic gold mining towns like Juneau and Skagway. Depart at 1pm  ",
   "image": "cruise5.jpeg",
   addedDate: "2023-04-29",
+  length: 3,
 }
   
 ];
@@ -192,7 +201,7 @@ function filterSortTrips() {
 
     // Sort trips from the lowest to highest price
     filteredSortedArrTrips = filteredSortedArrTrips.sort((a, b) => {
-      return a.price - b.price;
+      return a.length - b.length;
     });
 
   } else if (appliedSort == "date added") {
