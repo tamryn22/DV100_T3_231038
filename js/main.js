@@ -112,9 +112,6 @@ $(document).ready(function(){
 // ------------------------------------------------------------------------
 
 function loadTrips(tripsToShow) {
-
-  // Clear all elements inside the Trips cards container
-
   $("#tripsContainer").empty();
 
   // Loop though trips
@@ -126,27 +123,29 @@ function loadTrips(tripsToShow) {
 
     
 
-    // 1: Select the trips container add the trips card to it
+    // card
     $("#tripsContainer").append($("#tripCardTemplate").html());
 
-    // 2: Create a variable that contains the most recently added trip card
+    // trip added to card
     let currentChild = $("#tripsContainer").children().eq(i);
 
-    // 3: Set the content for the current trip card from the trip array
+    // trip array to card
     $(currentChild).find("#nameText").text(trips.name);
     $(currentChild).find("#priceText").text("R" + trips.price);
     $(currentChild).find("#descriptionText").text(trips.description);
     $(currentChild).find(".card-img-top").attr('src','/images/' + trips.image);
-
-    // 4: Hide the description text from the curent card
-    $(currentChild).find("#descriptionText").hide();
-    $(currentChild).find("#originTemp").hide();
     // $(currentChild).find("#purchase").hide();
-
+    // Hide the description text 
+    $(currentChild).find("#descriptionText").hide();
+ 
+   
+    // pricetext. toggle() ;
+    // descriptiontext. toggle() ;
+    // button. toggle() ;
   };
 
 };
-
+// the checkout page remove icons----------------------------
 
 $(".trash1").click(function(){
   $('#1').remove()
@@ -255,4 +254,18 @@ $(document).ready(function(){
   
   });
 
+})
+
+// ------------------------------------------------------------------------
+// When checkout is clicked
+// ------------------------------------------------------------------------
+$("#checkout").click(function(){
+  alert("Purchase Successful; Enjoy that sea!")
+})
+
+// ------------------------------------------------------------------------
+// When purchase is clicked
+// ------------------------------------------------------------------------
+$("#purchase").click(function(){
+  alert("Ticket added to Cart")
 })
