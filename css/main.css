@@ -12,7 +12,9 @@ body{
     
 }
 
-
+readme{
+    background-color: #F5C378;
+}
 #logo{
     height: 50px;
     width: 50px;

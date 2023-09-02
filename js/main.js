@@ -260,7 +260,7 @@ $(document).ready(function(){
 // When checkout is clicked
 // ------------------------------------------------------------------------
 $("#checkout").click(function(){
-  alert("Purchase Successful; Enjoy that sea!")
+  alert("Purchase Successful; Enjoy the sea!")
 })
 
 // ------------------------------------------------------------------------
