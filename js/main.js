@@ -141,6 +141,7 @@ function loadTrips(tripsToShow) {
     // 4: Hide the description text from the curent card
     $(currentChild).find("#descriptionText").hide();
     $(currentChild).find("#originTemp").hide();
+    // $(currentChild).find("#purchase").hide();
 
   };
 

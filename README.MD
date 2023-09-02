@@ -4,6 +4,11 @@
 <h5 align="center" style="padding:0 margin:0;">DV100_TERM3_2023 </h5>
 </br>
 <p>
-<img >
+<img src="/images/home1.png">
+<img src="/images/home2.png">
+<img src="/images/home3.png">
+<img src="/images/trips2.png">
+<img src="/images/checkout.png">
+
 
 <a href="">
