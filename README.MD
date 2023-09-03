@@ -18,6 +18,6 @@
 <img src="/images/checkout.png">
 
 <h5>DEMONSTRATION VIDEO</h5>
-<a href="">
+<a href="https://drive.google.com/file/d/1gP_nqt1xWQ1evPQM5ebfEiM_WL8UhYo0/view?usp=sharing">demo</a>
 
 </body>

@@ -12,9 +12,10 @@ body{
     
 }
 
-readme{
+#readme{
     background-color: #F5C378;
 }
+
 #logo{
     height: 50px;
     width: 50px;
@@ -250,3 +251,19 @@ p {
 
 }
 
+.tripCost{
+    background-color: wheat;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    width:auto;
+    text-align: center;
+    /* float: center; */
+    color: #213E60;
+}
+
+#cart{
+    float: right;
+    margin: 50px;
+}
